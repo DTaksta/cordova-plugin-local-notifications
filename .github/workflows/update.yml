@@ -3,7 +3,7 @@ name: Sync Fork with Upstream
 on:
   schedule:
     # Runs at 00:00 UTC every day
-    - cron: '* * * * *'
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
