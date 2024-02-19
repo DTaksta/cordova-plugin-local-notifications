@@ -15,19 +15,19 @@ jobs:
       with:
         repository: DTaksta/cordova-plugin-local-notifications
         ref: master
-    
+
     - name: Add upstream remote
       run: git remote add upstream https://github.com/katzer/cordova-plugin-local-notifications.git
-    
+
     - name: Fetch upstream changes
       run: git fetch upstream
-    
+
     - name: Checkout the master branch
       run: git checkout master
-    
+
     - name: Merge upstream changes
-      run: git merge upstream/master
-    
+      run: git merge upstream/master --allow-unrelated-histories
+
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
