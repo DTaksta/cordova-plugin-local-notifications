@@ -30,8 +30,8 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
 
-    - name: Merge upstream changes
-      run: git merge upstream/master --allow-unrelated-histories
+    - name: Merge upstream changes with 'ours' strategy
+      run: git merge upstream/master --allow-unrelated-histories --strategy-option=ours
 
     - name: Push changes
       uses: ad-m/github-push-action@master
